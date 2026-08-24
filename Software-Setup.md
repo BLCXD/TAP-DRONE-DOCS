@@ -22,25 +22,7 @@ Głównym zadaniem układu NVIDIA Jetson jest odbieranie obrazu z kamery RunCam,
 
 ## 3. Aparatura (Raspberry Pi 4 GCS)
 
-### Skrypt dla Drążków (Arduino)
-W programie Arduino IDE wgrywamy prosty skrypt:
-```cpp
-#include <Joystick.h>
-Joystick_ Joystick;
 
-void setup() {
-  Joystick.begin();
-}
-
-void loop() {
-  int xValue = analogRead(A0);
-  int yValue = analogRead(A1);
-  // Konwersja na zakres joysticka (0-1023)
-  Joystick.setXAxis(xValue);
-  Joystick.setYAxis(yValue);
-  delay(10);
-}
-```
 
 ### Środowisko QGroundControl
 1. Na systemie Raspberry Pi OS wgrywamy program **QGroundControl** (QGC).
